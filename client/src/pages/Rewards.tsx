@@ -18,7 +18,7 @@ export const Rewards: React.FC = () => {
   }
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col gap-6 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col gap-6">
       <div>
         <h1 className="text-3xl font-bold text-charcoal">Rewards & Transactions</h1>
         <p className="text-sm text-charcoal/60 font-medium">Detailed audit trail of all actions, deposits, and releases executed by your wallet.</p>

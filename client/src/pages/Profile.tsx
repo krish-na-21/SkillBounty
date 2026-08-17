@@ -47,14 +47,14 @@ export const Profile: React.FC = () => {
   ];
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-8 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
       {/* LEFT PANEL: PROFILE SUMMARY */}
       <div className="w-full md:w-80 shrink-0 flex flex-col gap-6">
         <div className="bg-white border border-accent rounded-xl p-6 shadow-sm flex flex-col items-center text-center gap-4">
           <img 
             src={user?.avatar} 
             alt={user?.username} 
-            className="w-24 h-24 rounded-full border border-accent object-cover bg-[#FAF7F2]" 
+            className="w-24 h-24 rounded-full border border-accent object-cover bg-background" 
           />
 
           <div className="flex flex-col items-center gap-1">
@@ -144,7 +144,7 @@ export const Profile: React.FC = () => {
                     required
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
+                    className="w-full bg-background/85 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
                   />
                 </div>
                 <div>
@@ -153,7 +153,7 @@ export const Profile: React.FC = () => {
                     type="text"
                     value={avatar}
                     onChange={(e) => setAvatar(e.target.value)}
-                    className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
+                    className="w-full bg-background/85 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
                   />
                 </div>
               </div>
@@ -164,7 +164,7 @@ export const Profile: React.FC = () => {
                   rows={4}
                   value={bio}
                   onChange={(e) => setBio(e.target.value)}
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
+                  className="w-full bg-background/85 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -199,7 +199,7 @@ export const Profile: React.FC = () => {
                 className={`p-4 border rounded-xl flex items-start gap-3.5 transition-all ${
                   ach.earned 
                     ? 'bg-white border-primary/40 shadow-sm' 
-                    : 'bg-[#FAF7F2]/60 border-accent/40 opacity-60'
+                    : 'bg-accent/20 border-accent/40 opacity-60'
                 }`}
               >
                 <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 ${

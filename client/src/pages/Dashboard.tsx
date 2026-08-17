@@ -76,7 +76,7 @@ export const Dashboard: React.FC = () => {
   const winsCount = contributorSubmissions.filter(s => s.status === 'Winner').length;
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
       {/* MAIN ANALYTICS COLUMN */}
       <div className="flex-1 flex flex-col gap-8">
         {/* Profile Card Header */}

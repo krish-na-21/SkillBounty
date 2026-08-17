@@ -171,7 +171,7 @@ export const CreateBounty: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-2xl mx-auto flex flex-col gap-6 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-2xl mx-auto flex flex-col gap-6">
       {/* Header */}
       <div className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold text-charcoal">Create New Bounty</h1>

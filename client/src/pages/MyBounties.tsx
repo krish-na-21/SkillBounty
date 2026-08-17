@@ -20,7 +20,7 @@ export const MyBounties: React.FC = () => {
   }
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-5xl mx-auto flex flex-col gap-6 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-5xl mx-auto flex flex-col gap-6">
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold text-charcoal">My Bounties</h1>
@@ -60,7 +60,7 @@ export const MyBounties: React.FC = () => {
                 <h3 className="font-bold text-sm text-charcoal leading-snug line-clamp-2">{bounty.title}</h3>
                 <span className="text-[10px] uppercase font-bold text-charcoal/40">Status: {bounty.status}</span>
               </div>
-              <div className="px-5 py-4 border-t border-accent/30 bg-[#FAF7F2] flex justify-between items-center text-xs text-charcoal/50">
+              <div className="px-5 py-4 border-t border-accent/30 bg-accent/20 flex justify-between items-center text-xs text-charcoal/50">
                 <span>Deadline: {new Date(bounty.deadline).toLocaleDateString()}</span>
                 <span className="font-semibold text-primary">{bounty.submissionCount || 0} Submissions</span>
               </div>

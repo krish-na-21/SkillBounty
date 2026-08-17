@@ -72,7 +72,7 @@ export const Explore: React.FC = () => {
   }, [search, category, status, sort, storeBounties]);
 
   return (
-    <div className="flex flex-col w-full h-full p-6 md:p-8 gap-6 max-w-6xl mx-auto overflow-y-auto">
+    <div className="flex flex-col w-full p-6 md:p-8 gap-6 max-w-6xl mx-auto">
       {/* Page Header */}
       <div className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold text-charcoal">Explore Bounties</h1>

@@ -89,7 +89,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 onClick={() => handleNavClick(item.path)}
                 className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   isActive 
-                    ? 'bg-secondary-container text-primary shadow-[0_2px_4px_rgba(119,136,115,0.1)]' 
+                    ? 'bg-accent text-primary shadow-[0_2px_4px_rgba(15,76,129,0.08)]' 
                     : 'text-charcoal/70 hover:bg-surface-variant/40 hover:text-charcoal'
                 }`}
               >
@@ -111,7 +111,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 onClick={() => handleNavClick(item.path)}
                 className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   isActive 
-                    ? 'bg-secondary-container text-primary' 
+                    ? 'bg-accent text-primary' 
                     : 'text-charcoal/70 hover:bg-surface-variant/40 hover:text-charcoal'
                 }`}
               >
@@ -184,7 +184,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             <input 
               type="text" 
               placeholder="Search bounties, skills, or projects..." 
-              className="w-full bg-[#F5EEE4] border border-accent rounded-full py-2 pl-11 pr-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-charcoal placeholder:text-charcoal/40"
+              className="w-full bg-white border border-outline-variant/60 rounded-full py-2 pl-11 pr-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-charcoal placeholder:text-charcoal/40"
             />
           </div>
 
@@ -263,7 +263,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Wallet Info Badge & Trigger */}
             {wallet.connected ? (
-              <div className="flex items-center gap-2 bg-[#F5EEE4] border border-accent rounded-full py-1.5 px-3">
+              <div className="flex items-center gap-2 bg-accent/40 border border-outline-variant/60 rounded-full py-1.5 px-3">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-background text-[9px] font-bold">
                   {wallet.walletType === 'simulator' ? 'SIM' : 'WT'}
                 </div>
@@ -318,7 +318,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                     onClick={() => handleNavClick(item.path)}
                     className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm font-semibold transition-all ${
                       isActive 
-                        ? 'bg-secondary-container text-primary' 
+                        ? 'bg-accent text-primary' 
                         : 'text-charcoal/70 hover:bg-surface-variant/40 hover:text-charcoal'
                     }`}
                   >
@@ -337,7 +337,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                     onClick={() => handleNavClick(item.path)}
                     className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm font-semibold transition-all ${
                       isActive 
-                        ? 'bg-secondary-container text-primary' 
+                        ? 'bg-accent text-primary' 
                         : 'text-charcoal/70 hover:bg-surface-variant/40 hover:text-charcoal'
                     }`}
                   >

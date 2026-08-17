@@ -8,7 +8,7 @@ export const Settings: React.FC = () => {
   const [networkType, setNetworkType] = useState(wallet.network || 'Testnet (Simulator)');
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-2xl mx-auto flex flex-col gap-6 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-2xl mx-auto flex flex-col gap-6">
       <div>
         <h1 className="text-3xl font-bold text-charcoal">Settings</h1>
         <p className="text-sm text-charcoal/60">Configure your connection endpoints, notification centers, and developer sandboxes.</p>
@@ -23,7 +23,7 @@ export const Settings: React.FC = () => {
           <p className="text-xs text-charcoal/65 leading-relaxed">
             Select the active Stellar ledger endpoint. Escrows will be verified against this horizon cluster.
           </p>
-          <div className="flex bg-[#FAF7F2] p-1 rounded-lg border border-accent/40 mt-1 self-start">
+          <div className="flex bg-accent/40 p-1 rounded-lg border border-outline-variant/60 mt-1 self-start">
             {['Stellar Testnet', 'Testnet (Simulator)', 'Mainnet'].map((net) => (
               <button
                 key={net}

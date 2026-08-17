@@ -257,7 +257,7 @@ export const BountyDetails: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 w-full h-full p-6 md:p-8 max-w-6xl mx-auto overflow-y-auto">
+    <div className="flex flex-col lg:flex-row gap-8 w-full p-6 md:p-8 max-w-6xl mx-auto">
       {/* LEFT COLUMN: DETAILS */}
       <div className="flex-1 flex flex-col gap-6">
         {/* Breadcrumb / Back button */}
@@ -374,32 +374,32 @@ export const BountyDetails: React.FC = () => {
                   {/* Submission Links */}
                   <div className="flex flex-wrap gap-2.5 pt-3 border-t border-accent/20">
                     {sub.githubRepo && (
-                      <a href={sub.githubRepo} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-[#FAF7F2] border border-accent hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
+                      <a href={sub.githubRepo} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-white border border-outline-variant/60 hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
                         <svg className="w-3.5 h-3.5 text-charcoal/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Repository
                       </a>
                     )}
                     {sub.githubPR && (
-                      <a href={sub.githubPR} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-[#FAF7F2] border border-accent hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
+                      <a href={sub.githubPR} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-white border border-outline-variant/60 hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
                         <svg className="w-3.5 h-3.5 text-charcoal/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Pull Request
                       </a>
                     )}
                     {sub.figmaLink && (
-                      <a href={sub.figmaLink} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-[#FAF7F2] border border-accent hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
+                      <a href={sub.figmaLink} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-white border border-outline-variant/60 hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
                         <svg className="w-3.5 h-3.5 text-charcoal/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path></svg> Figma Design
                       </a>
                     )}
                     {sub.liveWebsite && (
-                      <a href={sub.liveWebsite} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-[#FAF7F2] border border-accent hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
+                      <a href={sub.liveWebsite} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-white border border-outline-variant/60 hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
                         <Globe className="w-3.5 h-3.5 text-charcoal/60" /> Demo URL
                       </a>
                     )}
                     {sub.documentation && (
-                      <a href={sub.documentation} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-[#FAF7F2] border border-accent hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
+                      <a href={sub.documentation} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-white border border-outline-variant/60 hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
                         <FileText className="w-3.5 h-3.5 text-charcoal/60" /> Documentation
                       </a>
                     )}
                     {sub.videoDemo && (
-                      <a href={sub.videoDemo} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-[#FAF7F2] border border-accent hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
+                      <a href={sub.videoDemo} target="_blank" rel="noreferrer" className="flex items-center gap-1 bg-white border border-outline-variant/60 hover:border-charcoal rounded px-2.5 py-1 text-[10px] text-charcoal/80 font-semibold transition-colors">
                         <PlayCircle className="w-3.5 h-3.5 text-charcoal/60" /> Video Demo
                       </a>
                     )}
@@ -476,7 +476,7 @@ export const BountyDetails: React.FC = () => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Explain your approach, libraries used, and how to test..."
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg p-2.5 text-xs text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg p-2.5 text-xs text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -487,7 +487,7 @@ export const BountyDetails: React.FC = () => {
                   value={githubRepo}
                   onChange={(e) => setGithubRepo(e.target.value)}
                   placeholder="https://github.com/..."
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -498,7 +498,7 @@ export const BountyDetails: React.FC = () => {
                   value={githubPR}
                   onChange={(e) => setGithubPR(e.target.value)}
                   placeholder="Optional PR Link"
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -509,7 +509,7 @@ export const BountyDetails: React.FC = () => {
                   value={figmaLink}
                   onChange={(e) => setFigmaLink(e.target.value)}
                   placeholder="Optional Figma File"
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -520,7 +520,7 @@ export const BountyDetails: React.FC = () => {
                   value={liveWebsite}
                   onChange={(e) => setLiveWebsite(e.target.value)}
                   placeholder="Optional Sandbox or App URL"
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg p-2.5 text-xs text-charcoal focus:outline-none focus:border-primary"
                 />
               </div>
 

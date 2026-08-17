@@ -20,7 +20,7 @@ export const Submissions: React.FC = () => {
   }
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col gap-6 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col gap-6">
       <div>
         <h1 className="text-3xl font-bold text-charcoal">My Submissions</h1>
         <p className="text-sm text-charcoal/60 font-medium">Verify your submitted solution histories and current approval badges.</p>

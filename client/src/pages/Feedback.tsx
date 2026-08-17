@@ -25,7 +25,7 @@ export const Feedback: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col gap-6 overflow-y-auto">
+    <div className="w-full p-6 md:p-8 max-w-4xl mx-auto flex flex-col gap-6">
       <div>
         <h1 className="text-3xl font-bold text-charcoal">User Feedback Center</h1>
         <p className="text-sm text-charcoal/60">Help us shape the future of SkillBounty. Submit your feedback to the Stellar Campus review board.</p>
@@ -50,7 +50,7 @@ export const Feedback: React.FC = () => {
                   setSuggestions('');
                   setBugs('');
                 }}
-                className="mt-4 px-4 py-2 border border-accent rounded-lg text-xs font-bold text-charcoal hover:bg-[#FAF7F2] transition-colors"
+                className="mt-4 px-4 py-2 border border-accent rounded-lg text-xs font-bold text-charcoal hover:bg-accent/40 transition-colors"
               >
                 Submit Another Response
               </button>
@@ -120,7 +120,7 @@ export const Feedback: React.FC = () => {
                   value={suggestions}
                   onChange={(e) => setSuggestions(e.target.value)}
                   placeholder="How can we make SkillBounty better for developers and project owners?"
-                  className="w-full min-h-[80px] bg-[#FAF7F2] border border-accent rounded-lg p-3 text-xs text-charcoal focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-charcoal/30 resize-y"
+                  className="w-full min-h-[80px] bg-background/80 border border-outline-variant/60 rounded-lg p-3 text-xs text-charcoal focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-charcoal/30 resize-y"
                   required
                 />
               </div>
@@ -134,7 +134,7 @@ export const Feedback: React.FC = () => {
                   value={bugs}
                   onChange={(e) => setBugs(e.target.value)}
                   placeholder="If you encountered any unexpected behaviors or validation warnings, let us know here."
-                  className="w-full min-h-[80px] bg-[#FAF7F2] border border-accent rounded-lg p-3 text-xs text-charcoal focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-charcoal/30 resize-y"
+                  className="w-full min-h-[80px] bg-background/80 border border-outline-variant/60 rounded-lg p-3 text-xs text-charcoal focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-charcoal/30 resize-y"
                 />
               </div>
 
@@ -160,7 +160,7 @@ export const Feedback: React.FC = () => {
               href="https://forms.gle/feedback_form_placeholder"
               target="_blank" 
               rel="noreferrer"
-              className="mt-1 flex items-center justify-between p-3 rounded-lg border border-accent bg-[#FAF7F2] hover:bg-[#FAF7F2]/50 transition-colors group"
+              className="mt-1 flex items-center justify-between p-3 rounded-lg border border-accent bg-accent/20 hover:bg-accent/40 transition-colors group"
             >
               <div className="flex flex-col">
                 <span className="text-xs font-bold text-charcoal group-hover:text-primary transition-colors">Feedback Google Form</span>
@@ -173,7 +173,7 @@ export const Feedback: React.FC = () => {
               href="https://docs.google.com/spreadsheets/d/testing_sheet_placeholder/edit"
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center justify-between p-3 rounded-lg border border-accent bg-[#FAF7F2] hover:bg-[#FAF7F2]/50 transition-colors group"
+              className="flex items-center justify-between p-3 rounded-lg border border-accent bg-accent/20 hover:bg-accent/40 transition-colors group"
             >
               <div className="flex flex-col">
                 <span className="text-xs font-bold text-charcoal group-hover:text-primary transition-colors">Interactions Spreadsheet</span>
