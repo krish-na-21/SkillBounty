@@ -21,6 +21,57 @@ export const CreateBounty: React.FC = () => {
     skillsRequired: '',
   });
 
+  const templates = [
+    {
+      name: 'Frontend Development',
+      title: 'Build Responsive React Dashboard Component',
+      description: 'Implement a modern, high-performance dashboard view for showing user analytics with beautiful charts and responsive layouts.',
+      category: 'Development',
+      tags: 'react, frontend, dashboard',
+      rewardAmount: '200',
+      requirements: '1. Responsive on mobile, tablet, and desktop.\n2. Leverage chart libraries for visual data rendering.\n3. Clean, documented code.',
+      skillsRequired: 'React, TypeScript, TailwindCSS',
+    },
+    {
+      name: 'Soroban Smart Contract',
+      title: 'Write Soroban Escrow Smart Contract',
+      description: 'Implement a Soroban smart contract in Rust that allows secure escrow funding, lock-ups, and multi-signature release.',
+      category: 'Development',
+      tags: 'rust, soroban, smart-contract',
+      rewardAmount: '500',
+      requirements: '1. Compiles with the latest Soroban CLI.\n2. Complete test coverage exceeding 90%.\n3. Proper auth validation.',
+      skillsRequired: 'Rust, Soroban SDK, Smart Contracts',
+    },
+    {
+      name: 'Logo & Brand Identity',
+      title: 'Design Brand Logo & Visual Assets',
+      description: 'Create a modern visual brand identity for a Web3 decentralized platform, including logo variants, color system, and social banners.',
+      category: 'Design',
+      tags: 'branding, figma, design',
+      rewardAmount: '150',
+      requirements: '1. SVG and Figma source file deliverables.\n2. Light and dark theme logo variants.\n3. High-quality vector banners.',
+      skillsRequired: 'Figma, Illustrator, Branding',
+    }
+  ];
+
+  const handleApplyTemplate = (tpl: typeof templates[0]) => {
+    const futureDate = new Date();
+    futureDate.setDate(futureDate.getDate() + 14);
+    const deadlineString = futureDate.toISOString().split('T')[0];
+
+    setFormData({
+      title: tpl.title,
+      description: tpl.description,
+      category: tpl.category,
+      tags: tpl.tags,
+      rewardAmount: tpl.rewardAmount,
+      tokenType: 'XLM',
+      deadline: deadlineString,
+      requirements: tpl.requirements,
+      skillsRequired: tpl.skillsRequired,
+    });
+  };
+
   const categories = ['Development', 'Design', 'Content', 'Marketing', 'Security'];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -154,6 +205,26 @@ export const CreateBounty: React.FC = () => {
           {/* STEP 1: Details */}
           {step === 1 && (
             <div className="flex flex-col gap-4">
+              {/* Autofill template box */}
+              <div className="bg-accent/30 border border-outline-variant/60 rounded-xl p-3.5 flex flex-col gap-2.5">
+                <span className="text-[11px] font-bold text-primary uppercase tracking-wider flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5" /> Autofill from Template
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  {templates.map((tpl) => (
+                    <button
+                      key={tpl.name}
+                      type="button"
+                      onClick={() => handleApplyTemplate(tpl)}
+                      className="text-left p-2.5 rounded-lg border border-outline-variant/80 bg-white hover:border-primary hover:bg-accent/40 transition duration-150 group"
+                    >
+                      <div className="text-[11px] font-bold text-charcoal group-hover:text-primary transition">{tpl.name}</div>
+                      <div className="text-[9px] text-charcoal/60 mt-0.5 truncate">{tpl.title}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <div>
                 <label className="block text-xs font-bold text-charcoal uppercase tracking-wider mb-2">Bounty Title</label>
                 <input
@@ -163,7 +234,7 @@ export const CreateBounty: React.FC = () => {
                   placeholder="e.g. Implement Stellar Anchor integration"
                   value={formData.title}
                   onChange={handleChange}
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -176,7 +247,7 @@ export const CreateBounty: React.FC = () => {
                   placeholder="Provide a detailed description of the task. Explain exactly what needs to be built."
                   value={formData.description}
                   onChange={handleChange}
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -187,7 +258,7 @@ export const CreateBounty: React.FC = () => {
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
+                    className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
                   >
                     {categories.map((c) => (
                       <option key={c} value={c}>{c}</option>
@@ -202,7 +273,7 @@ export const CreateBounty: React.FC = () => {
                     placeholder="rust, soroban, anchor"
                     value={formData.tags}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
+                    className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
                   />
                 </div>
               </div>
@@ -224,7 +295,7 @@ export const CreateBounty: React.FC = () => {
                       placeholder="500"
                       value={formData.rewardAmount}
                       onChange={handleChange}
-                      className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 pl-3 pr-12 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
+                      className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 pl-3 pr-12 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
                     />
                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-charcoal/40">XLM</span>
                   </div>
@@ -237,7 +308,7 @@ export const CreateBounty: React.FC = () => {
                     required
                     value={formData.deadline}
                     onChange={handleChange}
-                    className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
+                    className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal focus:outline-none focus:border-primary"
                   />
                 </div>
               </div>
@@ -263,7 +334,7 @@ export const CreateBounty: React.FC = () => {
                   placeholder="List out specific technical requirements (e.g. 90% test coverage, must run on testnet, GitHub PR linked)."
                   value={formData.requirements}
                   onChange={handleChange}
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
                 />
               </div>
 
@@ -275,7 +346,7 @@ export const CreateBounty: React.FC = () => {
                   placeholder="React, Rust, Smart Contracts"
                   value={formData.skillsRequired}
                   onChange={handleChange}
-                  className="w-full bg-[#FAF7F2] border border-accent rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
+                  className="w-full bg-background/80 border border-outline-variant/60 rounded-lg py-2 px-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-primary"
                 />
               </div>
             </div>
@@ -283,7 +354,7 @@ export const CreateBounty: React.FC = () => {
         </div>
 
         {/* Buttons Bar */}
-        <div className="px-6 py-4 bg-[#FAF7F2] border-t border-accent/40 flex justify-between">
+        <div className="px-6 py-4 bg-accent/20 border-t border-outline-variant/40 flex justify-between">
           <button
             type="button"
             onClick={handlePrev}
