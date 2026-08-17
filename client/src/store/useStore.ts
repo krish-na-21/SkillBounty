@@ -84,7 +84,7 @@ const DEFAULT_BOUNTIES: IBounty[] = [
   {
     contractBountyId: 10002,
     title: 'SkillBounty Logo & Brand Identity',
-    description: 'Design a professional logo and visual style guide for SkillBounty matching our handcrafted minimalism vibe. Brand colors should leverage warm stone, sage green, and cream shades.',
+    description: 'Design a professional logo and visual style guide for SkillBounty matching our handcrafted minimalism vibe. Brand colors should leverage classic premium dark blue, light blue, and clean icy shades.',
     category: 'Design',
     rewardAmount: 350,
     tokenType: 'XLM',

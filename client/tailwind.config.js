@@ -8,26 +8,26 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#778873', // Moss Green
-          dark: '#5a6b57',
+          DEFAULT: '#0f4c81', // Classic Premium Dark Blue
+          dark: '#0a3357',
         },
         secondary: {
-          DEFAULT: '#A1BC98', // Sage Green
-          dark: '#85a07c',
+          DEFAULT: '#3a86c8', // Aesthetic Medium-Light Blue
+          dark: '#2a6ea8',
         },
         accent: {
-          DEFAULT: '#DCCFC0', // Warm Stone
-          dark: '#c4b5a3',
+          DEFAULT: '#e6f0fa', // Icy Accent Blue
+          dark: '#c8def4',
         },
         background: {
-          DEFAULT: '#FDF6ED', // Cream Background
-          dark: '#f6ebd9',
+          DEFAULT: '#f5f9fc', // Clean light blue-gray background
+          dark: '#eaf2f8',
         },
-        charcoal: '#2D2D2D', // Soft dark text
-        'surface-container-low': '#f6f3f2',
-        'surface-container': '#f0eded',
-        'surface-variant': '#e4e2e1',
-        'outline-variant': '#c4c8bf',
+        charcoal: '#1b2a4a', // Navy Blue charcoal text
+        'surface-container-low': '#ffffff',
+        'surface-container': '#f0f6fc',
+        'surface-variant': '#e1edf8',
+        'outline-variant': '#b5d0ea',
       },
       fontFamily: {
         script: ['"Hipster Script Pro"', '"Great Vibes"', 'Pacifico', 'cursive'],
