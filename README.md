@@ -165,33 +165,31 @@ VITE_REGISTRY_CONTRACT_ID=CAZP2YRZ7W45AU4FJNHNAJ5L4D6DW3CYTXP2V2BOGCMGRVSGVK7DBO
 ## 10. Screenshots
 
 ### Product UI
-<img width="1914" height="937" alt="image" src="https://github.com/user-attachments/assets/6e53b5a6-d38d-4157-a6f6-17f9b1d0f9ce"/>
+<img width="1917" height="937" alt="image" src="https://github.com/user-attachments/assets/a3e46e50-c152-4f1c-a3d1-59ab1c352048" />
 
 *Main dashboard showcasing the core functionality of SkillBounty.*
-
 ---
 
 ### Wallet Connection & Balance
-<img width="1919" height="936" alt="image" src="https://github.com/user-attachments/assets/012fd9ea-c6e6-4c99-bd30-9c903ff2320e" />
+<img width="1919" height="932" alt="image" src="https://github.com/user-attachments/assets/ab2ef6a2-afda-490d-95a3-fda0f97bf01b" />
 
 *Connected Stellar wallet displaying the user's XLM balance.*
 
 ---
-
 ### Dashboard
-<img width="1916" height="930" alt="image" src="https://github.com/user-attachments/assets/c79e82f0-87dd-4e8b-b242-6cea5fbf0a99" />
+<img width="1919" height="934" alt="image" src="https://github.com/user-attachments/assets/5df1c47c-889f-4a06-b03f-eb9395fb14e6" />
 
 ---
 
 ### Mobile Responsive Design
-<img width="274" height="592" alt="image" src="https://github.com/user-attachments/assets/2b616180-db91-48d8-ad85-3d42a5b9a666" />
-
+<img width="268" height="581" alt="image" src="https://github.com/user-attachments/assets/7e3fff62-2454-42f7-a472-316fead1a4c4" />
 *Responsive layout across mobile devices.*
 
 ---
 
 ### CI/CD Pipeline & Test Results
-<img width="1893" height="978" alt="image" src="https://github.com/user-attachments/assets/c8dc1411-4e62-408f-ac0e-23f2992892b9" />
+<img width="1899" height="980" alt="image" src="https://github.com/user-attachments/assets/ee48a823-88ec-436c-a923-f75dc8812055" />
+
 
 *GitHub Actions workflow showing successful builds and passing tests.*
 
@@ -235,30 +233,13 @@ We use **GitHub Actions** to automate CI/CD processes. The workflow runs on ever
 *   **Number of Users Tested:** 10
 *   **Feedback Collection Process:** Users completed a Google Form detailing usability, transaction delays, and feature suggestions. Data was automatically aggregated in a Google Sheet.
 *   **Feedback Summary:** Average payout settlement duration measured under 4.5 seconds. Adding a simulator login option significantly resolved onboarding friction. UI components were optimized based on mobile responsive feedback.
-*   **Google Form Link:** [Feedback Survey Link](https://forms.gle/SLAcFisfN4K7K3CX7)
-*   **Google Sheet Link:** [Feedback Audit Sheet Link](https://docs.google.com/spreadsheets/d/1IIORKh26c_MwJs8jEo7DSNLfp5NDOUuZGasWQMTMOTI/edit?usp=sharing)
-
-### 10+ Wallet Interaction Evidence
-
-| User | Wallet | Wallet Interaction / Function | Transaction Link | Status |
-|---|---|---|---|---|
-| User 1 (Creator) | `GCYTEM...Z54KG` | Connect Wallet & Authenticate | N/A (Session Sign) | Success |
-| User 1 (Creator) | `GCYTEM...Z54KG` | Fund Escrow (Bounty #10001) | [Stellar.Expert Transaction](https://stellar.expert/explorer/testnet/tx/84697f90c9d22931f12a40b63570109ab88796fc9cc953e095ac5887e41a7734) | Confirmed |
-| User 2 (Developer) | `GBDEV1...7YUI9` | Connect Wallet & Authenticate | N/A (Session Sign) | Success |
-| User 2 (Developer) | `GBDEV1...7YUI9` | Submit Solution (Bounty #10001) | [Stellar.Expert Transaction](https://stellar.expert/explorer/testnet/tx/3ad25db6bb0fe7fa0cba1bd553bcbdff3be664da54cb379fbc98080fc42e052d) | Confirmed |
-| User 3 (Developer) | `GBDEV2...1KOP4` | Connect Wallet & Authenticate | N/A (Session Sign) | Success |
-| User 3 (Developer) | `GBDEV2...1KOP4` | Submit Solution (Bounty #10001) | [Stellar.Expert Transaction](https://stellar.expert/explorer/testnet/tx/3ad25db6bb0fe7fa0cba1bd553bcbdff3be664da54cb379fbc98080fc42e052d) | Confirmed |
-| User 1 (Creator) | `GCYTEM...Z54KG` | Select Winner (Bounty #10001) | [Stellar.Expert Transaction](https://stellar.expert/explorer/testnet/tx/84697f90c9d22931f12a40b63570109ab88796fc9cc953e095ac5887e41a7734) | Confirmed |
-| User 4 (Creator) | `GBCRE4...99ASD` | Connect Wallet & Authenticate | N/A (Session Sign) | Success |
-| User 4 (Creator) | `GBCRE4...99ASD` | Create Bounty & Fund Escrow (#10002) | [Stellar.Expert Transaction](https://stellar.expert/explorer/testnet/tx/84697f90c9d22931f12a40b63570109ab88796fc9cc953e095ac5887e41a7734) | Confirmed |
-| User 5 (Developer) | `GBDEV5...X7ZZA` | Submit Solution (Bounty #10002) | [Stellar.Expert Transaction](https://stellar.expert/explorer/testnet/tx/3ad25db6bb0fe7fa0cba1bd553bcbdff3be664da54cb379fbc98080fc42e052d) | Confirmed |
-| User 4 (Creator) | `GBCRE4...99ASD` | Select Winner (Bounty #10002) | [Stellar.Expert Transaction](https://stellar.expert/explorer/testnet/tx/84697f90c9d22931f12a40b63570109ab88796fc9cc953e095ac5887e41a7734) | Confirmed |
-
+*   **Google Form Link:** [Feedback Survey Link](https://forms.gle/MNYo85R8fzzeK3zr7)
+*   **Google Sheet Link:** [Feedback Audit Sheet Link](https://docs.google.com/spreadsheets/d/1i9bzlhLF1mw-sP8A7HsA-zQTjSvyAKTXBW0qVwiU_BM/edit?usp=sharing)
 ---
 
 ## 14. Demo Video
 
-*   **Demo Video Link:** [SkillBounty Walkthrough Video](https://drive.google.com/file/d/1O8Youk45YyZxKD9cTyIp5E5l4Blsnq_Y/view?usp=sharing)
+*   **Demo Video Link:** [SkillBounty Walkthrough Video](https://drive.google.com/file/d/1fbhQJ6QdfHoqLE0FzW3Kabxwui8cXR0N/view?usp=sharing)
 *   **Description:** A 5-minute video walkthrough showcasing wallet logins, creating a bounty, depositing rewards into escrow, developer submissions, and contract-based winner payouts.
 
 ---
